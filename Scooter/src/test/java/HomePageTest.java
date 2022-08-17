@@ -16,12 +16,12 @@ public class HomePageTest {
     @Before
     public void startUp() {WebDriverManager.chromedriver().setup();
      driver = new ChromeDriver();
+     driver.get("https://qa-scooter.praktikum-services.ru");
+     driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
     @Test
     public void Test1() {
-        driver.get("https://qa-scooter.praktikum-services.ru");
         HomePageElements homePageElements = new HomePageElements(driver);
-        homePageElements.waitForLoadHomePage();
         homePageElements.scrollForImportantQuestions();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         homePageElements.clickHowMuchDoesItCost();
@@ -32,9 +32,7 @@ public class HomePageTest {
     }
     @Test
     public void Test2() {
-        driver.get("https://qa-scooter.praktikum-services.ru");
         HomePageElements homePageElements = new HomePageElements(driver);
-        homePageElements.waitForLoadHomePage();
         homePageElements.scrollForImportantQuestions();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         homePageElements.clickWantAFewScootersNow();
@@ -45,9 +43,7 @@ public class HomePageTest {
     }
     @Test
     public void Test3() {
-        driver.get("https://qa-scooter.praktikum-services.ru");
         HomePageElements homePageElements = new HomePageElements(driver);
-        homePageElements.waitForLoadHomePage();
         homePageElements.scrollForImportantQuestions();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         homePageElements.clickHowDoYouCaclulateTheTime();
@@ -58,9 +54,7 @@ public class HomePageTest {
     }
     @Test
     public void Test4() {
-        driver.get("https://qa-scooter.praktikum-services.ru");
         HomePageElements homePageElements = new HomePageElements(driver);
-        homePageElements.waitForLoadHomePage();
         homePageElements.scrollForImportantQuestions();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         homePageElements.clickIsItPossibleOrderScooterForToday();
@@ -71,9 +65,7 @@ public class HomePageTest {
     }
     @Test
     public void Test5() {
-        driver.get("https://qa-scooter.praktikum-services.ru");
         HomePageElements homePageElements = new HomePageElements(driver);
-        homePageElements.waitForLoadHomePage();
         homePageElements.scrollForImportantQuestions();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         homePageElements.clickCanIProlongOrBackEarlie();
@@ -84,9 +76,7 @@ public class HomePageTest {
     }
     @Test
     public void Test6() {
-        driver.get("https://qa-scooter.praktikum-services.ru");
         HomePageElements homePageElements = new HomePageElements(driver);
-        homePageElements.waitForLoadHomePage();
         homePageElements.scrollForImportantQuestions();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         homePageElements.clickDoYouGiveChargeWithScooter();
@@ -97,9 +87,7 @@ public class HomePageTest {
     }
     @Test
     public void Test7() {
-        driver.get("https://qa-scooter.praktikum-services.ru");
         HomePageElements homePageElements = new HomePageElements(driver);
-        homePageElements.waitForLoadHomePage();
         homePageElements.scrollForImportantQuestions();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         homePageElements.clickCanICancelMyOrder();
@@ -110,9 +98,7 @@ public class HomePageTest {
     }
     @Test
     public void Test8() {
-        driver.get("https://qa-scooter.praktikum-services.ru");
         HomePageElements homePageElements = new HomePageElements(driver);
-        homePageElements.waitForLoadHomePage();
         homePageElements.scrollForImportantQuestions();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         homePageElements.clickILiveSoFarDoYouCome();
